@@ -16,9 +16,10 @@ package ecscni
 import (
 	"context"
 
+	current "github.com/containernetworking/cni/pkg/types/100"
+
 	apieni "github.com/aws/amazon-ecs-agent/agent/api/eni"
 	"github.com/aws/amazon-ecs-agent/agent/dockerclient/dockerapi"
-	"github.com/containernetworking/cni/pkg/types/current"
 )
 
 // NamespaceHelper defines the methods for performing additional actions to setup/clean the task namespace.

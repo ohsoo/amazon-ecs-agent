@@ -24,14 +24,14 @@ import (
 	"testing"
 	"time"
 
-	cnitypes "github.com/containernetworking/cni/pkg/types"
-
 	"github.com/docker/docker/api/types"
 	"github.com/stretchr/testify/assert"
 
-	mock_dockerapi "github.com/aws/amazon-ecs-agent/agent/dockerclient/dockerapi/mocks"
-	"github.com/containernetworking/cni/pkg/types/current"
+	cnitypes "github.com/containernetworking/cni/pkg/types"
+	current "github.com/containernetworking/cni/pkg/types/100"
 	"github.com/golang/mock/gomock"
+
+	mock_dockerapi "github.com/aws/amazon-ecs-agent/agent/dockerclient/dockerapi/mocks"
 )
 
 const (
