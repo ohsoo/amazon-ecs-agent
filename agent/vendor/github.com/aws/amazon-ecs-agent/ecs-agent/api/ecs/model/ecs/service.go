@@ -16,6 +16,8 @@
 package ecs
 
 import (
+	"fmt"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/client"
 	"github.com/aws/aws-sdk-go/aws/client/metadata"
@@ -117,6 +119,8 @@ func (c *ECS) newRequest(op *request.Operation, params, data interface{}) *reque
 	if initRequest != nil {
 		initRequest(req)
 	}
+
+	fmt.Println("OPERATION:", req.Operation.Name, "REQUEST ID:", req.RequestID)
 
 	return req
 }
